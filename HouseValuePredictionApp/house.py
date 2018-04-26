@@ -37,7 +37,7 @@ def index():
 
         load_model = pickle.load(open('xgboost.sav', 'rb'))
         res = -load_model.predict(sample)
-        price1 =(res * (1299963.0-993913.0))+993913.0
+        price1 =(res * (1299963.0-900001.0))+900001.0
         price = price1[0]
         # price = str(res[0])
         return render_template('predict.html', price=price)
